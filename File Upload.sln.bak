@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "File Upload", "File Upload\File Upload.csproj", "{5CA3A7F5-7C09-4D2F-BAB4-A5B5CCB2B99F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "File Upload.Tests", "File Upload.Tests\File Upload.Tests.csproj", "{5801E7D0-AAB8-4EF0-9DA9-39CA282AB001}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CA3A7F5-7C09-4D2F-BAB4-A5B5CCB2B99F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CA3A7F5-7C09-4D2F-BAB4-A5B5CCB2B99F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CA3A7F5-7C09-4D2F-BAB4-A5B5CCB2B99F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CA3A7F5-7C09-4D2F-BAB4-A5B5CCB2B99F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5801E7D0-AAB8-4EF0-9DA9-39CA282AB001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5801E7D0-AAB8-4EF0-9DA9-39CA282AB001}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5801E7D0-AAB8-4EF0-9DA9-39CA282AB001}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5801E7D0-AAB8-4EF0-9DA9-39CA282AB001}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,106 @@
+﻿@model TextMatch.ViewModels.HomeModel
+@{
+    
+           
+    ViewBag.Title = "Home";
+    
+}
+<style>
+
+    .btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+</style>
+<div class="container-fluid">
+
+<h2>Search for text</h2>
+    <div class = "form-group">
+        <label>Upload from</label>
+
+        <span class="btn btn-default btn-file">
+            Browse <input type="file" name="file">
+        </span>
+    </div>
+
+
+    <div class = "form-group">
+        <label>Sub Text</label>
+
+        <div class="input-group">
+            
+            @Html.TextBoxFor(m => m.SubText, new { @class = "form-control", placeholder="Search for..." })
+            <span class="input-group-btn">
+                <button class="btn btn-info" type="button" onclick="textMatch()">Upload</button>
+            </span>
+        </div>
+    </div>
+
+
+    <div class = "form-group clear">
+        <label>Matches</label>
+        <input type ="text" class="form-control" id="matches" />
+    </div>
+</div>
+
+<script>
+
+    function clearResults(e) {
+
+        if (e.keyCode == 13) {
+                textMatch();
+            }
+            else {
+                $("#matches").val('');
+            }
+    }
+
+    $(document).ready(function () {
+        $("#SubText").keypress(function (event) {
+            if (event.keyCode == 13) {
+                event.preventDefault();
+
+                textMatch();
+            }
+            else {
+                $("#matches").val('');
+
+            }
+        });
+    });
+
+    function textMatch() {
+
+        var data = { text: $('#Text').val(), subText: $('#SubText').val() } ;
+
+        // Get text match service
+        $.ajax({
+            url: "@Url.Content("~/Service/TextMatches")",
+            type: "GET",
+            cache: false,
+            async: false,
+            data: data,
+            success: function (response, textStatus, jqXHR) {
+                if (response != null) {
+                    $("#matches").val(response);
+                }
+            }
+        });
+    }
+</script>
+
