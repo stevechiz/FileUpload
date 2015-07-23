@@ -29,33 +29,33 @@
 </style>
 <div class="container-fluid">
 
-<h2>Search for text</h2>
-    <div class = "form-group">
-        <label>Upload from</label>
+<h2>Upload File</h2>
 
-        <span class="btn btn-default btn-file">
-            Browse <input type="file" name="file">
-        </span>
-    </div>
+@using(Html.BeginForm())
+{
+		 
+    <div class="row">
 
+        <div class="col-sm-8">
+            <div class="form-group">
+                <label>Upload from</label>
 
-    <div class = "form-group">
-        <label>Sub Text</label>
-
-        <div class="input-group">
-            
-            @Html.TextBoxFor(m => m.SubText, new { @class = "form-control", placeholder="Search for..." })
-            <span class="input-group-btn">
-                <button class="btn btn-info" type="button" onclick="textMatch()">Upload</button>
-            </span>
+                <span class="btn btn-default">
+                    <input type="file" name="file">
+                </span>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <button class="btn btn-info" type="button" onclick="textMatch()">Upload</button>
         </div>
     </div>
 
 
-    <div class = "form-group clear">
-        <label>Matches</label>
-        <input type ="text" class="form-control" id="matches" />
-    </div>
+
+
+                
+
+}
 </div>
 
 <script>
