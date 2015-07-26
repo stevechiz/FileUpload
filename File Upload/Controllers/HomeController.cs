@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -15,10 +16,20 @@ namespace TextMatch.Controllers
         {
             var model = new ViewModels.HomeModel();
 
-            model.Text = "Polly put the kettle on, polly put the kettle on, polly put the kettle on we’ll all have tea";
-
             return View(model);
         }
 
+        [HttpPost]
+        public ActionResult Upload(HttpPostedFileBase file)
+        {
+            if (file != null && file.ContentLength > 0)
+            {
+                var fileName = Path.GetFileName(file.FileName);
+                var path = Path.Combine(Server.MapPath("~/Images/"), fileName);
+                file.SaveAs(path);
+            }
+
+            return RedirectToAction("UploadDocument");
+        }
     }
 }

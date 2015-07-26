@@ -31,7 +31,7 @@
 
 <h2>Upload File</h2>
 
-@using(Html.BeginForm())
+@using(Html.BeginForm("Upload", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
 		 
     <div class="row">
@@ -46,61 +46,15 @@
             </div>
         </div>
         <div class="col-sm-4">
-            <button class="btn btn-info" type="button" onclick="textMatch()">Upload</button>
+            <button class="btn btn-info" type="submit" >Upload</button>
         </div>
-    </div>
-
-
-
-
-                
+    </div>  
 
 }
 </div>
 
 <script>
 
-    function clearResults(e) {
 
-        if (e.keyCode == 13) {
-                textMatch();
-            }
-            else {
-                $("#matches").val('');
-            }
-    }
-
-    $(document).ready(function () {
-        $("#SubText").keypress(function (event) {
-            if (event.keyCode == 13) {
-                event.preventDefault();
-
-                textMatch();
-            }
-            else {
-                $("#matches").val('');
-
-            }
-        });
-    });
-
-    function textMatch() {
-
-        var data = { text: $('#Text').val(), subText: $('#SubText').val() } ;
-
-        // Get text match service
-        $.ajax({
-            url: "@Url.Content("~/Service/TextMatches")",
-            type: "GET",
-            cache: false,
-            async: false,
-            data: data,
-            success: function (response, textStatus, jqXHR) {
-                if (response != null) {
-                    $("#matches").val(response);
-                }
-            }
-        });
-    }
 </script>
 
