@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace TextMatch.Controllers
+namespace File_Upload.Controllers
 {
     public class HomeController : Controller
     {

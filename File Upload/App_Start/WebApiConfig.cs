@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 
-namespace TextMatch
+namespace File_Upload
 {
     public static class WebApiConfig
     {

@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Text;
 
-namespace TextMatch.Models
+namespace File_Upload.Services
 {
-    public class StringSearch
+    interface IIsoValidation
     {
     }
 }
