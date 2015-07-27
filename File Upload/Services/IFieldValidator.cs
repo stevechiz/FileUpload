@@ -5,7 +5,8 @@ using System.Text;
 
 namespace File_Upload.Services
 {
-    interface IFieldValidator
+    public interface IFieldValidator
     {
+        bool Validate(Models.ImportRecord record);
     }
 }

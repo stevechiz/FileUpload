@@ -151,20 +151,23 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\TransactionRecord.cs" />
+    <Compile Include="Models\ImportRecord.cs" />
     <Compile Include="NavigationRoutes\INavigationRouteFilter.cs" />
     <Compile Include="NavigationRoutes\NamedRoute.cs" />
     <Compile Include="NavigationRoutes\NavigationExtensions.cs" />
     <Compile Include="NavigationRoutes\NavigationRouteConfigurationExtensions.cs" />
     <Compile Include="NavigationRoutes\NavigationRouteFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\ExcelFileParser.cs" />
+    <Compile Include="Services\FieldValidator.cs" />
+    <Compile Include="Services\FileImporter.cs" />
     <Compile Include="Services\FileParseService.cs" />
-    <Compile Include="Services\ExcelFileUploader.cs" />
+    <Compile Include="Services\ExcelFileImporter.cs" />
     <Compile Include="Services\IFieldValidator.cs" />
+    <Compile Include="Services\IFileImporter.cs" />
     <Compile Include="Services\IFileParser.cs" />
-    <Compile Include="Services\IIsoValidation.cs" />
+    <Compile Include="Services\IIsoCurrencyCodeChecker.cs" />
     <Compile Include="Services\ITransactionStore.cs" />
+    <Compile Include="Services\TransactionStore.cs" />
     <Compile Include="ViewModels\HomeModel.cs" />
   </ItemGroup>
   <ItemGroup>

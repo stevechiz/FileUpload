@@ -5,7 +5,7 @@ using System.Web;
 
 namespace File_Upload.Models
 {
-    public class TransactionRecord
+    public class ImportRecord
     {
 
         public string Account { get; set; }
@@ -14,6 +14,12 @@ namespace File_Upload.Models
 
         public string CurrencyCode { get; set; }
 
+        public string AmountString { get; set; }
+
         public decimal Amount { get; set; }
+
+        public bool IsValid { get; set; }
+
+        public string ValidationMessage { get; set; }
     }
 }

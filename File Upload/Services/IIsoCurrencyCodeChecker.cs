@@ -5,8 +5,9 @@ using System.Text;
 
 namespace File_Upload.Services
 {
-    public interface ITransactionStore
+    public interface IIsoCurrencyCodeChecker
     {
-        bool Save(Models.ImportRecord record);
+
+        bool Validate(string currencyCode);
     }
 }

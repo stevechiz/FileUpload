@@ -5,7 +5,7 @@ using System.Text;
 
 namespace File_Upload.Services
 {
-    interface IFileParser
+    public interface IFileParser
     {
     }
 }
